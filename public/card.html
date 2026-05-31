@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억을 잇다 | 기억 노트 카드</title>
+    <link rel="stylesheet" href="/_shared/css/style.css">
+    <link rel="stylesheet" href="/_shared/css/card.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" defer></script>
+</head>
+<body class="card-page" data-page="card">
+    <main class="site-shell card-shell-page">
+        <div data-include="header"></div>
+
+        <section class="card-hero-section">
+            <div class="card-hero-bg" aria-hidden="true">
+                <img src="/_shared/assets/images/main-visual-bg.png" alt="">
+            </div>
+            <div class="card-hero-dim" aria-hidden="true"></div>
+            <div class="card-hero-inner">
+                <div class="card-hero-copy">
+                    <p class="section-label">MEMORY NOTE CARD</p>
+                    <h1>대화로 떠올린 기억이<br>한 장의 카드로 정리되었습니다.</h1>
+                    <p>
+                        AI 다온과 나눈 회상 대화가 고향집의 장소, 냄새, 소리, 마음을 담은
+                        기억 노트 카드로 완성됩니다.
+                    </p>
+                </div>
+                <div class="card-hero-preview" aria-label="완성된 기억 노트 카드 미리보기">
+                    <span>완성 카드</span>
+                    <strong>고향집의 마당</strong>
+                    <em>어린 시절 · 에피소드 1</em>
+                    <p>장독대 옆에 앉아 있던 시간, 아궁이 연기와 밥 짓는 냄새가 하루의 시작을 알려주던 기억.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="memory-card-section">
+            <div class="memory-card-layout">
+                <article class="memory-card-canvas" id="memoryCardCanvas" aria-label="기억 노트 카드">
+                    <div class="memory-card-top">
+                        <span>기억 노트 카드 01</span>
+                        <em>고향과 어린 시절 · 에피소드 1</em>
+                    </div>
+
+                    <div class="memory-card-title-area">
+                        <p>어린 시절</p>
+                        <h2>고향집의 마당</h2>
+                    </div>
+
+                    <div class="memory-card-photo">
+                        <img src="/_shared/assets/images/main-visual-bg.png" alt="냇가와 고향 풍경">
+                    </div>
+
+                    <div class="memory-card-body">
+                        <h3>오늘 떠올린 기억</h3>
+                        <p>
+                            어린 시절의 고향집은 크지 않았지만, 마당과 장독대, 우물가와 냇가가
+                            하루의 기억을 가득 채우던 곳이었습니다. 아궁이 연기와 갓 지은 밥 냄새,
+                            풀벌레 소리와 물소리는 지금도 마음 깊은 곳에 따뜻하게 남아 있습니다.
+                        </p>
+                    </div>
+
+                    <div class="memory-card-detail-grid">
+                        <div>
+                            <span>기억의 장소</span>
+                            <strong>마당과 장독대</strong>
+                        </div>
+                        <div>
+                            <span>떠오른 감각</span>
+                            <strong>밥 짓는 냄새, 물소리, 풀벌레 소리</strong>
+                        </div>
+                        <div>
+                            <span>함께한 풍경</span>
+                            <strong>우물가, 텃밭, 냇가에서 놀던 아이들</strong>
+                        </div>
+                        <div>
+                            <span>지금의 마음</span>
+                            <strong>어머니의 품처럼 따뜻하고 아련함</strong>
+                        </div>
+                    </div>
+
+                    <blockquote class="memory-card-quote">
+                        “작고 아련한 유년의 놀이터이자, 마음 깊이 남아 있는 집이었습니다.”
+                    </blockquote>
+
+                    <footer class="memory-card-footer">
+                        <span>© 도서출판 사랑말 기억을 잇다 — AI 대화로 회상하는 나의 이야기</span>
+                    </footer>
+                </article>
+
+                <aside class="memory-card-side" id="sharePanel">
+                    <div class="card-status-panel">
+                        <p class="section-label">CARD STATUS</p>
+                        <h2>첫 번째 기억 카드가 완성되었습니다.</h2>
+                        <p>
+                            발표용 데모에서는 카드 생성 결과와 공유 버튼 UI를 확인합니다.
+                            정식 서비스에서는 카드가 누적되어 테마 묶음과 PDF 자서전으로 확장됩니다.
+                        </p>
+                    </div>
+
+                    <div class="card-actions-panel">
+                        <span>공유 및 저장</span>
+                        <button type="button" id="saveImageBtn">이미지로 저장</button>
+                        <button type="button" id="pdfPreviewBtn">PDF로 보기</button>
+                        <button type="button" id="kakaoShareBtn">카카오톡 공유</button>
+                        <button type="button" id="copyLinkButton">링크 복사</button>
+                    </div>
+
+                    <div class="daon-card-comment">
+                        <img src="/_shared/assets/images/daon-ai.png" alt="AI 다온 캐릭터">
+                        <div>
+                            <strong>AI 다온</strong>
+                            <p>말씀해 주신 기억을 바탕으로 따뜻한 문장으로 정리했어요. 다음 에피소드도 이어가 볼 수 있습니다.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="autobiography-section" id="autobiography">
+            <div class="section-head narrow">
+                <p class="section-label">AUTOBIOGRAPHY</p>
+                <h2>카드가 쌓이면<br>나만의 자서전이 됩니다.</h2>
+            </div>
+            <div class="book-progress-layout">
+                <article class="book-progress-card">
+                    <span>현재 진행</span>
+                    <strong>1 / 24</strong>
+                    <p>고향과 어린 시절 테마의 첫 번째 에피소드를 완료했습니다.</p>
+                    <div class="book-progress-bar" aria-hidden="true">
+                        <span></span>
+                    </div>
+                </article>
+                <article class="book-progress-card is-soft">
+                    <span>테마 완주</span>
+                    <strong>1 / 4</strong>
+                    <p>한 테마 안의 4개 에피소드를 모두 마치면 4장 묶음 카드가 만들어집니다.</p>
+                </article>
+                <article class="book-progress-card is-dark">
+                    <span>전체 완주</span>
+                    <strong>24장</strong>
+                    <p>전체 기억 카드가 모이면 PDF 자서전으로 정리됩니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="complete-cta-section">
+            <div>
+                <p class="section-label">DEMO COMPLETE</p>
+                <h2>첫 번째 기억을 이어 보았습니다.</h2>
+                <p>이제 다시 AI 대화로 돌아가거나, 홈에서 전체 서비스 흐름을 확인할 수 있습니다.</p>
+            </div>
+            <div class="complete-actions">
+                <a href="/chat.html" class="primary-button">AI 대화 다시 하기</a>
+                <a href="/index.html" class="secondary-button">홈으로 돌아가기</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast-message" id="toastMessage" role="status" aria-live="polite">링크가 복사되었습니다.</div>
+
+    <script src="/_shared/js/main.js"></script>
+    <script src="/_shared/js/card.js"></script>
+</body>
+</html>

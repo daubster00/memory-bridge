@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+    <title id="title">오래된 골목길 풍경</title>
+    <desc id="desc">따뜻한 빛이 비치는 오래된 골목길과 나무, 집, 자전거가 있는 회상용 영상 썸네일입니다.</desc>
+    <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e8ddc4"/>
+            <stop offset="1" stop-color="#b9aa86"/>
+        </linearGradient>
+        <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d8c9aa"/>
+            <stop offset="1" stop-color="#b29c75"/>
+        </linearGradient>
+        <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur stdDeviation="0.7"/>
+        </filter>
+    </defs>
+    <rect width="1200" height="620" fill="url(#sky)"/>
+    <circle cx="1015" cy="86" r="96" fill="#f7e7ba" opacity="0.42"/>
+    <path d="M0 372 C265 320 452 350 612 374 C786 400 966 346 1200 330 L1200 620 L0 620 Z" fill="url(#road)"/>
+    <path d="M545 360 C578 430 612 515 636 620 L508 620 C525 530 535 438 545 360 Z" fill="#7e6b4d" opacity="0.21"/>
+    <path d="M620 372 C660 432 720 523 782 620 L640 620 C626 535 617 444 620 372 Z" fill="#6b5a42" opacity="0.16"/>
+    <g opacity="0.66" filter="url(#soft)">
+        <rect x="42" y="225" width="250" height="164" fill="#847a5c"/>
+        <polygon points="22,225 318,225 273,170 72,170" fill="#665d48"/>
+        <rect x="90" y="267" width="76" height="76" fill="#403c31" opacity="0.72"/>
+        <rect x="187" y="262" width="56" height="115" fill="#514835"/>
+        <rect x="892" y="230" width="246" height="150" fill="#8e8260"/>
+        <polygon points="866,230 1165,230 1112,177 914,177" fill="#6c6048"/>
+        <rect x="946" y="267" width="72" height="70" fill="#494233" opacity="0.72"/>
+    </g>
+    <g opacity="0.78">
+        <path d="M180 380 C138 310 139 210 185 147 C218 101 274 95 314 130 C352 164 361 225 330 277 C303 323 250 355 180 380 Z" fill="#5d6d42"/>
+        <path d="M100 395 C51 329 55 222 114 162 C164 112 244 125 277 187 C313 257 245 355 100 395 Z" fill="#6f7d4d" opacity="0.86"/>
+        <rect x="196" y="256" width="22" height="226" fill="#6d5c3e"/>
+        <path d="M1030 360 C996 283 1012 193 1069 143 C1124 95 1202 123 1211 203 C1219 277 1168 331 1030 360 Z" fill="#6d7b4e"/>
+        <rect x="1080" y="263" width="20" height="192" fill="#6a583c"/>
+    </g>
+    <g opacity="0.56">
+        <path d="M490 185 L493 468" stroke="#5b4a36" stroke-width="10" stroke-linecap="round"/>
+        <path d="M510 204 C608 196 714 198 836 220" stroke="#5b4a36" stroke-width="4" opacity="0.6"/>
+        <path d="M488 242 C382 249 296 272 208 320" stroke="#5b4a36" stroke-width="4" opacity="0.38"/>
+    </g>
+    <g transform="translate(64 390)" opacity="0.62" fill="none" stroke="#3b3428" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="48" cy="84" r="41"/>
+        <circle cx="158" cy="84" r="41"/>
+        <path d="M48 84 L92 18 L132 84 L84 84 L158 84"/>
+        <path d="M91 18 L108 18"/>
+    </g>
+    <g opacity="0.64" fill="#4c4335">
+        <circle cx="642" cy="358" r="9"/>
+        <path d="M642 370 L638 421" stroke="#4c4335" stroke-width="8" stroke-linecap="round"/>
+        <path d="M638 421 L620 458 M638 421 L656 458" stroke="#4c4335" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="680" cy="363" r="8"/>
+        <path d="M680 374 L683 423" stroke="#4c4335" stroke-width="7" stroke-linecap="round"/>
+        <path d="M683 423 L668 456 M683 423 L702 456" stroke="#4c4335" stroke-width="6" stroke-linecap="round"/>
+    </g>
+    <rect width="1200" height="620" fill="#5a4b36" opacity="0.18"/>
+    <rect width="1200" height="620" fill="#fff4d8" opacity="0.08"/>
+</svg>

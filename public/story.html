@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억을 잇다 | 이야기 듣기</title>
+    <link rel="stylesheet" href="/_shared/css/style.css">
+    <link rel="stylesheet" href="/_shared/css/story.css">
+</head>
+<body class="story-page" data-page="story">
+    <main class="site-shell story-shell">
+        <div data-include="header"></div>
+
+        <section class="story-hero-section">
+            <div class="story-hero-bg" aria-hidden="true">
+                <img src="/_shared/assets/images/main-visual-bg.png" alt="">
+            </div>
+            <div class="story-hero-dim" aria-hidden="true"></div>
+            <div class="story-hero-inner">
+                <div class="story-hero-copy">
+                    <p class="section-label">EPISODE READING</p>
+                    <h1>새벽이 되면<br>닭이 먼저 하루를 알렸습니다.</h1>
+                    <p>고향집의 새벽, 아궁이 연기, 장독대와 우물가의 소리를 따라 어린 시절을 떠올려 봅니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-listen-section" id="storyListen">
+            <div class="story-listen-layout">
+                <aside class="story-audio-panel">
+                    <div class="audio-control-box">
+                        <p class="section-label">VOICE READING</p>
+                        <h2>이야기 음성 듣기</h2>
+                        <p>
+                            재생 버튼을 누르면 성우가 읽어주는 것처럼 진행되는 데모 화면입니다.
+                            실제 서비스에서는 제공된 음성 파일을 연결합니다.
+                        </p>
+                        <button type="button" class="story-play-button" id="storyPlayButton">이야기 듣기</button>
+                        <audio id="storyAudio" preload="metadata" src="/_shared/assets/audio/story-narration.mp3"></audio>
+                        <div class="story-progress-wrap" aria-hidden="true">
+                            <span id="storyProgressBar"></span>
+                        </div>
+                        <div class="story-time-row">
+                            <span id="storyTimeText">00:00</span>
+                            <span id="storyDurationText">02:06</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <article class="story-reading-card" aria-label="에피소드 이야기 글">
+                    <div class="story-reading-head">
+                        <p class="section-label">STORY TEXT</p>
+                        <h2>고향집의 기억</h2>
+                        <p>본문을 읽으며 떠오르는 냄새, 소리, 장소를 천천히 붙잡아 보세요.</p>
+                    </div>
+                    <div class="story-text-list" id="storyTextList">
+                        <p class="is-active">새벽이 되면 닭이 먼저 하루를 알렸습니다. 아직 어둠이 채 가시지 않은 마당에는 찬 공기와 함께 아궁이 연기가 피어 올랐습니다. 가마솥 뚜껑을 열면 뽀얀 김이 하늘로 올라갔습니다.</p>
+                        <p>갓 지은 밥 냄새는 마당을 지나 골목 끝까지 번져 나갔습니다. 그 냄새를 맡으면 하루가 시작되었다는 것을 온몸이 먼저 알아차렸습니다.</p>
+                        <p>마당 한쪽에는 장독대가 줄지어 서 있었습니다. 햇볕을 받은 장독 사이로 된장 냄새와 간장 냄새가 조용히 퍼져 나갔습니다. 장독 뒤편 텃밭에는 파랗고 싱싱한 채소들이 자라고 있었습니다.</p>
+                        <p>우물가에는 차가운 물이 가득했습니다. 두레박을 내리면 물이 출렁이는 소리가 마당에 울려 퍼졌습니다. 그 물에 세수를 하면 잠이 번쩍 깼습니다.</p>
+                        <p>여름철에는 시냇가에서 종일 뛰어놀다 집으로 돌아오곤 했습니다. 몸에는 흙먼지가 묻고, 옷에는 물 냄새와 풀 냄새가 배어 있었습니다.</p>
+                        <p>집으로 돌아오면 아궁이 연기와 밥 짓는 냄새가 먼저 반겨주었습니다. 한밤이 되면 마루에 앉아 쑥 태우는 냄새를 맡았습니다. 풀벌레 소리와 멀리서 들려오는 소리가 그날의 밤을 가득 채웠습니다.</p>
+                        <p>추억이 가득한 고향집은 따뜻한 어머니의 품처럼 느껴졌습니다. 어릴 적 고향집은 크지 않았습니다. 그러나 지금 떠올려 보면, 그곳은 작고 아련한 유년의 놀이터이자, 마음 깊이 남아 있는 집이었습니다.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="story-sense-section">
+            <div class="section-head narrow">
+                <p class="section-label">REMEMBERING POINT</p>
+                <h2>이야기 속 감각을 따라<br>기억의 실마리를 찾습니다.</h2>
+            </div>
+            <div class="sense-grid">
+                <article>
+                    <span>소리</span>
+                    <strong>닭 울음과 물소리</strong>
+                    <p>하루를 알리던 소리와 두레박이 움직이던 우물가의 소리를 떠올립니다.</p>
+                </article>
+                <article>
+                    <span>냄새</span>
+                    <strong>밥 짓는 냄새와 아궁이 연기</strong>
+                    <p>아침 마당을 채우던 냄새를 따라 고향집의 분위기를 기억합니다.</p>
+                </article>
+                <article>
+                    <span>장소</span>
+                    <strong>마당, 장독대, 시냇가</strong>
+                    <p>오래 머물렀던 장소를 떠올리며 다음 대화의 소재를 준비합니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="story-next-section">
+            <div class="story-next-copy">
+                <p class="section-label">NEXT STEP</p>
+                <h2>이야기를 들은 뒤에는<br>영상으로 장면을 떠올립니다.</h2>
+                <p>
+                    다음 화면에서는 고향 풍경, 골목길과 집, 냇가에서 노는 아이들,
+                    저녁 풍경을 보며 기억을 더 구체적으로 떠올립니다.
+                </p>
+            </div>
+            <div class="story-question-box">
+                <span>이어질 회상 질문</span>
+                <ol>
+                    <li>고향집에서 가장 오래 머물던 장소가 어디인가요?</li>
+                    <li>그 집에 가장 기억에 남는 냄새나 소리가 있으신가요?</li>
+                    <li>어릴 때 집 근처에서 자주 하시던 일이 있었나요?</li>
+                    <li>그 시절 집을 떠올리면 지금 어떤 기분이 드세요?</li>
+                </ol>
+                <a href="/video.html" class="primary-button">영상 회상으로 이어가기</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/_shared/js/main.js"></script>
+    <script src="/_shared/js/story.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억을 잇다 | AI 다온 회상 대화</title>
+    <link rel="stylesheet" href="/_shared/css/style.css">
+    <link rel="stylesheet" href="/_shared/css/chat.css">
+    <link rel="stylesheet" href="/_shared/css/chat-extras.css">
+</head>
+<body class="chat-page" data-page="chat">
+    <main class="site-shell chat-shell-page">
+        <div data-include="header"></div>
+
+        <section class="chat-hero-section">
+            <div class="chat-hero-bg" aria-hidden="true">
+                <img src="/_shared/assets/images/main-visual-bg.png" alt="">
+            </div>
+            <div class="chat-hero-dim" aria-hidden="true"></div>
+            <div class="chat-hero-inner">
+                <div class="chat-hero-copy">
+                    <p class="section-label">AI MEMORY CONVERSATION</p>
+                    <h1>AI 다온과 함께<br>고향집의 기억을<br>천천히 이야기합니다.</h1>
+                    <p>
+                        방금 감상한 에피소드 내용을 바탕으로 다온이 질문을 건넵니다.
+                        떠오르는 장소, 냄새, 소리, 마음을 편하게 남겨 보세요.
+                    </p>
+                </div>
+                <aside class="chat-episode-summary" aria-label="현재 대화 정보">
+                    <span>현재 에피소드</span>
+                    <strong>고향과 어린 시절</strong>
+                    <em>에피소드 1 · 어린 시절</em>
+                    <p>고향집, 마당, 장독대, 우물가, 냇가의 기억을 떠올립니다.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="chat-main-section" id="chatStart">
+            <div class="chat-layout">
+                <aside class="daon-side-panel">
+                    <div class="daon-profile-card">
+                        <div class="daon-image-box">
+                            <img src="/_shared/assets/images/daon-ai.png" alt="AI 다온 캐릭터">
+                        </div>
+                        <div class="daon-status">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            <strong>AI 다온</strong>
+                            <em>회상 대화 도우미</em>
+                        </div>
+                    </div>
+
+                    <div class="conversation-guide-card">
+                        <p class="section-label">대화 안내</p>
+                        <h2>정답을 찾지 않아도 괜찮습니다.</h2>
+                        <p>
+                            생각나는 단어만 적어도 됩니다. 다온이 사용자의 표현을 바탕으로
+                            부드럽게 다음 질문을 이어갑니다.
+                        </p>
+                    </div>
+
+                    <div class="question-list-card">
+                        <span>오늘의 회상 질문</span>
+                        <ol>
+                            <li class="is-current">고향집에서 가장 오래 머물던 장소가 어디인가요?</li>
+                            <li>그 집에 가장 기억에 남는 냄새나 소리가 있으신가요?</li>
+                            <li>어릴 때 집 근처에서 자주 하시던 일이 있었나요?</li>
+                            <li>그 시절 집을 떠올리면 지금 어떤 기분이 드세요?</li>
+                        </ol>
+                    </div>
+                </aside>
+
+                <article class="conversation-panel" aria-label="AI 다온 회상 대화 화면">
+                    <div class="conversation-topbar">
+                        <div>
+                            <span>실시간 대화</span>
+                            <strong>다온이 천천히 답해드립니다.</strong>
+                        </div>
+                        <div class="conversation-actions">
+                            <button type="button" class="small-control-button" id="resetChatButton">처음부터</button>
+                            <button type="button" class="small-control-button end-button" id="endChatButton">대화 종료 · 카드 만들기</button>
+                        </div>
+                    </div>
+
+                    <div class="message-stream" id="messageStream" aria-live="polite"></div>
+
+                    <div class="quick-answer-box" aria-label="예시 답변">
+                        <button type="button" data-sample="마당이 가장 먼저 떠오릅니다. 장독대 옆에 앉아 있던 기억이 오래 남아 있어요.">마당과 장독대</button>
+                        <button type="button" data-sample="우물가가 생각납니다. 차가운 물소리와 두레박이 출렁이던 소리가 기억납니다.">우물가의 물소리</button>
+                        <button type="button" data-sample="냇가에서 친구들과 놀던 일이 떠오릅니다. 옷에 물 냄새와 풀 냄새가 배어 있었어요.">냇가에서 놀던 기억</button>
+                    </div>
+
+                    <form class="chat-input-area" id="chatForm">
+                        <label for="chatInput" class="sr-only">답변 입력</label>
+                        <textarea id="chatInput" rows="2" placeholder="떠오르는 기억을 편하게 적어주세요."></textarea>
+                        <div class="chat-input-actions">
+                            <button type="button" class="voice-demo-button" id="voiceDemoButton"><span>음성으로 말하기</span></button>
+                            <button type="submit" class="send-chat-button">답변 보내기</button>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <section class="chat-result-section">
+            <div class="section-head narrow">
+                <p class="section-label">NEXT STEP</p>
+                <h2>대화가 끝나면<br>기억 노트 카드로 정리됩니다.</h2>
+            </div>
+            <div class="result-preview-layout">
+                <article class="result-note-card">
+                    <span>기억 노트 미리보기</span>
+                    <h3>고향집의 마당</h3>
+                    <p id="memoryPreviewText">
+                        사용자의 답변이 쌓이면 다온이 기억의 장소, 함께 떠오른 감각,
+                        그때의 마음을 한 장의 카드 문장으로 정리합니다.
+                    </p>
+                    <small>© 도서출판 사랑말 기억을 잇다 — AI 대화로 회상하는 나의 이야기</small>
+                </article>
+                <div class="result-copy">
+                    <h3>충분히 이야기하셨다면, 위 “대화 종료 · 카드 만들기” 버튼을 눌러주세요.</h3>
+                    <p>
+                        대화 내용을 다온이 한 장의 기억 카드 문장으로 요약하고,
+                        저장한 뒤 기억 노트 페이지로 이동합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 요약/카드 저장 모달 -->
+    <div id="summaryModal" class="summary-modal" hidden aria-hidden="true" role="dialog" aria-labelledby="summaryHeading">
+        <div class="summary-backdrop" data-summary-close></div>
+        <div class="summary-dialog" role="document">
+            <header class="summary-header">
+                <h2 id="summaryHeading">기억 카드로 정리하기</h2>
+                <button type="button" class="summary-close" data-summary-close aria-label="닫기">✕</button>
+            </header>
+            <div class="summary-body" id="summaryBody"></div>
+            <footer class="summary-footer" id="summaryFooter"></footer>
+        </div>
+    </div>
+
+    <script src="/_shared/js/main.js"></script>
+    <script src="/_shared/js/chat.js"></script>
+</body>
+</html>

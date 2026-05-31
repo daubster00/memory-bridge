@@ -1,0 +1,500 @@
+
+.autobiography-page {
+    background: var(--shell-bg);
+}
+
+.autobiography-shell-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: visible;
+    background: var(--shell-bg);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.auto-hero-section {
+    position: relative;
+    min-height: clamp(620px, 45vw, 860px);
+    overflow: hidden;
+    color: #fffdf5;
+}
+
+.auto-hero-bg,
+.auto-hero-dim {
+    position: absolute;
+    inset: 0;
+}
+
+.auto-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.auto-hero-dim {
+    background:
+        linear-gradient(90deg, rgba(5, 16, 10, 0.82) 0%, rgba(5, 16, 10, 0.58) 42%, rgba(5, 16, 10, 0.18) 100%),
+        linear-gradient(180deg, rgba(5, 16, 10, 0.18) 0%, rgba(5, 16, 10, 0.52) 100%);
+}
+
+.auto-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1680px, calc(100% - 96px));
+    min-height: inherit;
+    margin: 0 auto;
+    padding: clamp(98px, 8vw, 150px) 0 clamp(82px, 7vw, 128px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 500px);
+    gap: clamp(44px, 6vw, 120px);
+    align-items: end;
+}
+
+.auto-hero-copy .section-label {
+    color: rgba(255, 253, 245, 0.74);
+}
+
+.auto-hero-copy h1 {
+    max-width: 1120px;
+    margin: 26px 0 0;
+    color: #fffdf5;
+    font-size: clamp(52px, 5.5vw, 108px);
+    line-height: 1.05;
+    letter-spacing: -0.085em;
+    font-weight: 790;
+}
+
+.auto-hero-copy p:not(.section-label) {
+    max-width: 760px;
+    margin: 34px 0 0;
+    color: rgba(255, 253, 245, 0.86);
+    font-size: clamp(20px, 1.4vw, 26px);
+    line-height: 1.78;
+    letter-spacing: -0.045em;
+}
+
+.auto-cover-preview {
+    min-height: 530px;
+    padding: 46px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+        linear-gradient(135deg, rgba(251, 247, 233, 0.97), rgba(231, 221, 197, 0.94));
+    color: var(--green);
+    border: 1px solid rgba(255, 253, 245, 0.35);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+}
+
+.auto-cover-preview span,
+.auto-cover-preview em {
+    color: rgba(23, 63, 38, 0.62);
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+}
+
+.auto-cover-preview strong {
+    display: block;
+    color: var(--green);
+    font-size: clamp(42px, 3.7vw, 70px);
+    line-height: 1.05;
+    letter-spacing: -0.09em;
+    font-weight: 800;
+}
+
+.auto-cover-preview p {
+    margin: 0;
+    color: rgba(23, 41, 30, 0.76);
+    font-size: 21px;
+    line-height: 1.6;
+    letter-spacing: -0.04em;
+}
+
+.auto-summary-section,
+.auto-book-section,
+.auto-theme-section,
+.auto-episode-section {
+    width: min(1680px, calc(100% - 96px));
+    margin: 0 auto;
+    padding: clamp(92px, 8vw, 154px) 0;
+    border-top: 1px solid var(--line);
+}
+
+.auto-summary-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.72fr);
+    gap: clamp(42px, 6vw, 112px);
+    align-items: end;
+}
+
+.auto-summary-head h2,
+.auto-book-copy h2,
+.auto-episode-copy h2,
+.auto-theme-section h2 {
+    margin: 22px 0 0;
+    color: var(--ink);
+    font-size: clamp(44px, 4.2vw, 82px);
+    line-height: 1.13;
+    letter-spacing: -0.085em;
+    font-weight: 790;
+}
+
+.auto-summary-head p:not(.section-label),
+.auto-book-copy p {
+    max-width: 740px;
+    margin: 28px 0 0;
+    color: rgba(43, 43, 37, 0.74);
+    font-size: clamp(19px, 1.25vw, 24px);
+    line-height: 1.82;
+    letter-spacing: -0.045em;
+}
+
+.auto-progress-card {
+    padding: clamp(34px, 3.4vw, 58px);
+    background: #fffdf5;
+    border: 1px solid rgba(23, 41, 30, 0.14);
+    box-shadow: 0 24px 70px rgba(23, 41, 30, 0.08);
+}
+
+.auto-progress-main span,
+.auto-theme-card span,
+.auto-episode-body span {
+    display: block;
+    color: rgba(23, 41, 30, 0.58);
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+}
+
+.auto-progress-main strong {
+    display: block;
+    margin-top: 14px;
+    color: var(--green);
+    font-size: clamp(58px, 6vw, 112px);
+    line-height: 1;
+    letter-spacing: -0.08em;
+}
+
+.auto-progress-main p {
+    margin: 20px 0 0;
+    color: rgba(43, 43, 37, 0.72);
+    font-size: 20px;
+    letter-spacing: -0.04em;
+}
+
+.auto-progress-bar,
+.theme-mini-progress {
+    height: 10px;
+    margin-top: 34px;
+    background: rgba(23, 41, 30, 0.1);
+    overflow: hidden;
+}
+
+.auto-progress-bar i,
+.theme-mini-progress i {
+    display: block;
+    width: 4.16%;
+    height: 100%;
+    background: var(--green);
+}
+
+.auto-progress-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.auto-progress-meta span {
+    min-height: 58px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(23, 63, 38, 0.07);
+    color: rgba(23, 41, 30, 0.7);
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.04em;
+}
+
+.auto-book-section {
+    display: grid;
+    grid-template-columns: minmax(520px, 0.82fr) minmax(0, 1fr);
+    gap: clamp(44px, 7vw, 128px);
+    align-items: center;
+}
+
+.auto-book-preview {
+    position: relative;
+    min-height: 560px;
+}
+
+.book-page {
+    position: absolute;
+    width: min(370px, 46%);
+    min-height: 510px;
+    padding: 42px 36px;
+    background: #fbf7e9;
+    border: 1px solid rgba(23, 41, 30, 0.16);
+    box-shadow: 0 28px 70px rgba(23, 41, 30, 0.12);
+}
+
+.book-page-cover {
+    left: 2%;
+    top: 0;
+    z-index: 2;
+    padding: 0;
+    overflow: hidden;
+    background: #fbf7e9;
+}
+
+.book-page-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1024 / 1536;
+    object-fit: cover;
+}
+
+.book-page-cover p,
+.book-page-cover span,
+.book-page-content span,
+.book-page-content small {
+    margin: 0;
+    color: rgba(23, 41, 30, 0.58);
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+.book-page-cover h2 {
+    margin: 0;
+    color: var(--green);
+    font-size: 72px;
+    line-height: 0.96;
+    letter-spacing: -0.1em;
+}
+
+.book-page-content {
+    left: 42%;
+    top: 56px;
+    z-index: 3;
+    background: #fffdf5;
+}
+
+.book-page-content h3 {
+    margin: 92px 0 0;
+    color: var(--green);
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: -0.08em;
+}
+
+.book-page-content p {
+    margin: 28px 0 0;
+    color: rgba(43, 43, 37, 0.76);
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: -0.04em;
+}
+
+.book-page-content small {
+    position: absolute;
+    left: 36px;
+    bottom: 36px;
+}
+
+.auto-action-row {
+    margin-top: 38px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 24px;
+    border: 1px solid rgba(23, 63, 38, 0.22);
+    background: transparent;
+    color: var(--green);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+}
+
+.auto-theme-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 54px;
+}
+
+.auto-theme-card {
+    min-height: 230px;
+    padding: 30px;
+    background: #fffdf5;
+    border: 1px solid rgba(23, 41, 30, 0.12);
+}
+
+.auto-theme-card.is-active {
+    background: var(--green);
+    color: #fffdf5;
+}
+
+.auto-theme-card.is-active span,
+.auto-theme-card.is-active p {
+    color: rgba(255, 253, 245, 0.72);
+}
+
+.auto-theme-card.is-active .theme-mini-progress {
+    background: rgba(255, 253, 245, 0.2);
+}
+
+.auto-theme-card.is-active .theme-mini-progress i {
+    width: 25%;
+    background: #fffdf5;
+}
+
+.auto-theme-card strong {
+    display: block;
+    min-height: 72px;
+    margin: 18px 0 22px;
+    color: inherit;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: -0.07em;
+}
+
+.auto-theme-card p {
+    margin: 0;
+    color: rgba(43, 43, 37, 0.64);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.auto-theme-card:not(.is-active) .theme-mini-progress i {
+    width: 0;
+}
+
+.auto-episode-section {
+    padding-bottom: clamp(120px, 9vw, 180px);
+}
+
+.auto-episode-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(36px, 5vw, 90px);
+    margin-top: 46px;
+    background: #fffdf5;
+    border: 1px solid rgba(23, 41, 30, 0.13);
+}
+
+.auto-episode-image {
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.auto-episode-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.auto-episode-body {
+    padding: clamp(42px, 5vw, 78px) clamp(36px, 5vw, 74px) clamp(42px, 5vw, 78px) 0;
+}
+
+.auto-episode-body h3 {
+    margin: 22px 0 0;
+    color: var(--green);
+    font-size: clamp(44px, 4.4vw, 82px);
+    line-height: 1.04;
+    letter-spacing: -0.09em;
+}
+
+.auto-episode-body p {
+    margin: 30px 0 0;
+    color: rgba(43, 43, 37, 0.74);
+    font-size: clamp(19px, 1.3vw, 24px);
+    line-height: 1.82;
+    letter-spacing: -0.045em;
+}
+
+.auto-episode-body .text-link {
+    display: inline-flex;
+    margin-top: 34px;
+}
+
+@media (max-width: 1100px) {
+    .auto-hero-inner,
+    .auto-summary-section,
+    .auto-book-section,
+    .auto-episode-card {
+        grid-template-columns: 1fr;
+    }
+
+    .auto-cover-preview {
+        min-height: 380px;
+    }
+
+    .auto-book-preview {
+        min-height: 480px;
+    }
+
+    .auto-theme-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .auto-episode-body {
+        padding: 42px;
+    }
+}
+
+@media (max-width: 720px) {
+    .auto-hero-inner,
+    .auto-summary-section,
+    .auto-book-section,
+    .auto-theme-section,
+    .auto-episode-section {
+        width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .auto-hero-inner {
+        padding-top: 74px;
+    }
+
+    .auto-progress-meta,
+    .auto-theme-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-page {
+        position: relative;
+        width: 100%;
+        min-height: 420px;
+        inset: auto;
+    }
+
+    .book-page + .book-page {
+        margin-top: -40px;
+    }
+
+    .auto-book-preview {
+        min-height: auto;
+    }
+}

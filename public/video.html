@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억을 잇다 | 영상 회상</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="/_shared/css/style.css">
+    <link rel="stylesheet" href="/_shared/css/video.css">
+    <link rel="stylesheet" href="/_shared/css/video-player.css">
+</head>
+<body class="video-page" data-page="video">
+    <main class="site-shell video-shell">
+        <div data-include="header"></div>
+
+        <section class="video-hero-section">
+            <div class="video-hero-copy">
+                <p class="section-label">MEMORY VIDEO</p>
+                <h1>그 시절의 장면을 바라보며<br>마음속 기억을 천천히 떠올립니다.</h1>
+                <p>
+                    고향 풍경, 골목길, 냇가에서 놀던 아이들, 저녁노을의 장면을 따라
+                    어린 시절의 감각과 이야기를 자연스럽게 떠올려 봅니다.
+                </p>
+            </div>
+        </section>
+
+        <section class="video-watch-section" id="videoStart">
+            <div class="video-layout">
+                <article class="video-player-card" aria-label="회상 영상 플레이어">
+                    <div class="video-stage" id="videoStage">
+                        <video
+                            id="memoryVideo"
+                            class="video-element"
+                            preload="metadata"
+                            poster="/_shared/assets/video/recording-poster.jpg"
+                            playsinline>
+                            <source src="/_shared/assets/video/recording.mp4" type="video/mp4">
+                            이 브라우저에서는 영상을 재생할 수 없습니다.
+                        </video>
+
+                        <button type="button" class="center-play-button" id="centerPlayButton" aria-label="영상 재생">
+                            <i class="ri-play-fill" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="video-control-bar" aria-hidden="true">
+                            <button type="button" class="control-play-icon" id="controlPlayButton" aria-label="재생/일시정지">
+                                <i class="ri-play-fill" id="controlPlayIcon"></i>
+                            </button>
+                            <span class="video-time">
+                                <span id="currentTime">00:00</span> / <span id="totalTime">00:00</span>
+                            </span>
+                            <span class="progress-track" id="progressTrack">
+                                <span class="progress-fill" id="progressFill"></span>
+                                <span class="progress-dot" id="progressDot"></span>
+                            </span>
+                            <span class="control-icons">
+                                <button type="button" class="icon-button" id="muteButton" aria-label="음소거 전환">
+                                    <i class="ri-volume-up-fill" id="muteIcon"></i>
+                                </button>
+                                <i class="ri-settings-3-fill"></i>
+                                <button type="button" class="icon-button" id="fullscreenButton" aria-label="전체화면">
+                                    <i class="ri-fullscreen-line"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="video-quick-actions" aria-label="영상 보조 기능">
+                        <button type="button" class="quick-button" id="replayButton">
+                            <i class="ri-restart-line" aria-hidden="true"></i>
+                            <span>다시 보기</span>
+                        </button>
+
+                        <div class="volume-group" role="group" aria-label="소리 조절">
+                            <button type="button" class="quick-button volume-main" id="volumeButton">
+                                <i class="ri-volume-up-fill" aria-hidden="true"></i>
+                                <span>소리 조절</span>
+                            </button>
+                            <button type="button" class="quick-button volume-step" id="volumeDownButton" aria-label="소리 줄이기">
+                                <i class="ri-subtract-line" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="quick-button volume-step" id="volumeUpButton" aria-label="소리 키우기">
+                                <i class="ri-add-line" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="video-guide-panel">
+                    <p class="section-label">WATCH GUIDE</p>
+                    <h2>화면을 보며 떠오르는 기억을 붙잡아 보세요.</h2>
+                    <ul>
+                        <li>
+                            <span>01</span>
+                            <p>영상은 천천히 감상해도 괜찮습니다.</p>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <p>떠오르는 장소, 냄새, 소리를 마음속에 적어 봅니다.</p>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <p>다음 단계에서 AI 다온이 그 기억을 질문으로 이어갑니다.</p>
+                        </li>
+                    </ul>
+                    <a href="/chat.html" class="guide-button">AI 다온과 이야기하기</a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="scene-section">
+            <div class="section-head narrow">
+                <p class="section-label">VIDEO SCENES</p>
+                <h2>영상은 네 가지 장면을 따라<br>기억의 문을 천천히 엽니다.</h2>
+            </div>
+            <div class="scene-grid">
+                <article>
+                    <span>01</span>
+                    <strong>고향 풍경</strong>
+                    <p>산과 들, 마을의 집들이 보이던 어린 시절의 배경을 떠올립니다.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <strong>골목길과 집</strong>
+                    <p>마당, 장독대, 아궁이, 우물가처럼 오래 남은 장소를 만납니다.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <strong>냇가의 아이들</strong>
+                    <p>물소리, 흙냄새, 풀냄새 속에서 뛰놀던 장면을 따라갑니다.</p>
+                </article>
+                <article>
+                    <span>04</span>
+                    <strong>저녁의 풍경</strong>
+                    <p>노을과 풀벌레 소리, 하루가 저물던 고향집의 밤을 떠올립니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="story-reminder-section">
+            <div class="story-copy">
+                <p class="section-label">EPISODE TEXT</p>
+                <h2>새벽이 되면 닭이 먼저<br>하루를 알렸습니다.</h2>
+                <p>
+                    아직 어둠이 채 가시지 않은 마당에는 찬 공기와 함께 아궁이 연기가 피어 올랐습니다.
+                    가마솥 뚜껑을 열면 뽀얀 김이 하늘로 올라갔고, 갓 지은 밥 냄새는 골목 끝까지 번져 나갔습니다.
+                </p>
+            </div>
+            <div class="question-preview-card">
+                <span>다음 단계</span>
+                <strong>회상 질문으로 이어집니다.</strong>
+                <ol>
+                    <li>고향집에서 가장 오래 머물던 장소가 어디인가요?</li>
+                    <li>그 집에 가장 기억에 남는 냄새나 소리가 있으신가요?</li>
+                    <li>어릴 때 집 근처에서 자주 하시던 일이 있었나요?</li>
+                    <li>그 시절 집을 떠올리면 지금 어떤 기분이 드세요?</li>
+                </ol>
+                <a href="/chat.html" class="primary-button">AI 대화로 이어가기</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/_shared/js/main.js"></script>
+    <script src="/_shared/js/video-player.js"></script>
+</body>
+</html>
