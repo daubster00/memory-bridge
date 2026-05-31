@@ -3,7 +3,7 @@
 
 const CARDS_ENDPOINT = '/api/cards';
 const KAKAO_APP_KEY = '6b8dc7fb2839b0def1184f65dca8f30a';
-const SITE_ORIGIN = 'https://btmdesign.kr';
+const SITE_ORIGIN = 'https://memory.btmdesign.kr';
 const SHARE_URL = `${SITE_ORIGIN}/card.html`;
 const SHARE_IMAGE_URL = `${SITE_ORIGIN}/_shared/assets/images/main-visual-bg.png`;
 
